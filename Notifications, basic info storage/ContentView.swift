@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section(header: Text("Task 1")) {
+                Section(header: Text("Part 1 / Task 1")) {
                     NavigationLink("Send Notification View") {
                         SendNotificationViewController().asSwiftUIView()
                     }
@@ -19,19 +19,27 @@ struct ContentView: View {
                         ObserverViewController().asSwiftUIView()
                     }
                 }
-                Section(header: Text("Task 2")) {
+                Section(header: Text("Part 1 / Task 2")) {
                     NavigationLink("Keyboard Handling View") {
                         KeyboardHandlingViewController().asSwiftUIView()
                     }
                 }
-                Section(header: Text("Task 3")) {
+                Section(header: Text("Part 1 / Task 3")) {
                     NavigationLink("Lifecycle Observer View") {
                         LifecycleObserverViewController().asSwiftUIView()
+                    }
+                }
+                Section(header: Text("Part 2 / Task 1")) {
+                    NavigationLink("Settings View") {
+                        SettingsViewController().asSwiftUIView()
                     }
                 }
                 
             }
             .listStyle(.insetGrouped)
+            .onAppear {
+                ThemeManager.applyStoredTheme()
+            }
         }
     }
 }
