@@ -20,11 +20,8 @@ struct ContentView: View {
                     }
                 }
                 Section(header: Text("Task 2")) {
-                    NavigationLink("Send Notification View") {
-                        SendNotificationViewController().asSwiftUIView()
-                    }
-                    NavigationLink("Observer View") {
-                        ObserverViewController().asSwiftUIView()
+                    NavigationLink("Keyboard Handling View") {
+                        KeyboardHandlingViewController().asSwiftUIView()
                     }
                 }
                 
