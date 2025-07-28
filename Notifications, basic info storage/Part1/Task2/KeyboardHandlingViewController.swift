@@ -62,7 +62,7 @@ class KeyboardHandlingViewController: UIViewController {
         else {
             return
         }
-
+        
         let animationCurve = UIView.AnimationOptions(rawValue: curveRaw << 16)
         let keyboardY = endFrame.origin.y
         let screenHeight = UIScreen.main.bounds.height
@@ -72,7 +72,7 @@ class KeyboardHandlingViewController: UIViewController {
         } else {
             centerYConstraint.constant = 0
         }
-
+        
         UIView.animate(withDuration: duration, delay: 0, options: animationCurve, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)

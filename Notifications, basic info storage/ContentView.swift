@@ -24,6 +24,11 @@ struct ContentView: View {
                         KeyboardHandlingViewController().asSwiftUIView()
                     }
                 }
+                Section(header: Text("Task 3")) {
+                    NavigationLink("Lifecycle Observer View") {
+                        LifecycleObserverViewController().asSwiftUIView()
+                    }
+                }
                 
             }
             .listStyle(.insetGrouped)
