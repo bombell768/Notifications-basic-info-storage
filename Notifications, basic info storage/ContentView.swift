@@ -34,6 +34,11 @@ struct ContentView: View {
                         SettingsViewController().asSwiftUIView()
                     }
                 }
+                Section(header: Text("Part 2 / Task 3")) {
+                    NavigationLink("Search View") {
+                        SearchViewController().asSwiftUIView()
+                    }
+                }
                 
             }
             .listStyle(.insetGrouped)
